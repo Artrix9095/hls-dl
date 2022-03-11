@@ -1,14 +1,12 @@
 {
-  "name": "@munirsafi/hls-dl",
-  "version": "0.1.1",
+  "name": "@artrix909/hls-dl",
+  "version": "0.2.0",
   "description": "Downloads HTTP live/archived stream (m3u, m3u8, mpd)",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/munirsafi/hls-dl.git"
+    "url": "git+https://github.com/Artrix9095/hls-dl.git"
   },
   "keywords": [
     "http",
@@ -22,12 +20,12 @@
     "live-stream",
     "download"
   ],
-  "author": "Munir Safi",
+  "author": "Artrix",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/munirsafi/hls-dl/issues"
+    "url": "https://github.com/Artrix9095/hls-dl/issues"
   },
-  "homepage": "https://github.com/munirsafi/hls-dl#readme",
+  "homepage": "https://github.com/Artrix9095/hls-dl#readme",
   "dependencies": {
     "sax": "^1.2.4"
   }
