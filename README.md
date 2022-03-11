@@ -24,13 +24,13 @@ Capturing media from live streams is not always a straightforward task. hls-dl s
 To include hls-dl in your project, run the following command:
 
 ```bash
-npm install @munirsafi/hls-dl
+npm install @artrix909/hls-dl
 ```
 
 or if you prefer using yarn:
 
 ```bash
-yarn add @munirsafi/hls-dl
+yarn add @artrix909/hls-dl
 ```
 
 <!-- [END gettingstarted] -->
@@ -49,7 +49,7 @@ Save file as example.js
 const hlsdl = require('hls-dl');
 const fs = require('fs');
 
-const httpstream = hlsdl('https://example.com/path/to/your/m3u8/file.m3u8');
+const httpstream = hlsdl('https://example.com/path/to/your/m3u8/file.m3u8', { headers: { 'Cache-Control': 'no-cache' } });
 httpstream.pipe(fs.createWriteStream('save_file_https.mp4'));
 
 // additionally, a playlist file in the file system can be loaded as well
@@ -95,6 +95,7 @@ Throughout the retrieval process, multiple events are emitted from the stream to
 - `options` <[Object]> configurable options for the stream to use
     - `parser` <[String]> Specifies which parser to use, either `m3u` or `mpd`
     - `timeout` <[Number]> Number of milliseconds to wait before considering a segment fetch as timed out
+    - `headers` <[Object]> A object of headers used for fetching the file
 - returns <[Stream.Readable]> A readable stream that will output playlist segment data
 
 This method will immediately begin capture of the specified playlist and return the readable stream
